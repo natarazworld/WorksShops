@@ -1,0 +1,34 @@
+task "t1"
+task ("t2")
+task t3
+task t4
+
+t1{
+  doLast {println "task1"}
+}
+
+t2{
+  doLast{println "task2"}
+ }
+t2{
+  doLast {println "t22--last" }
+doFirst{ println"t22--first" }
+}
+
+t3{
+   dependsOn t2,t1
+  doLast{println "task3"}
+}
+
+t4{
+  doLast{println "task4"}
+}
+
+ t4.dependsOn t3
+ defaultTasks  't4'
+
+//cmd>  gradle  t4
+//cmd> gradle 
+
+
+

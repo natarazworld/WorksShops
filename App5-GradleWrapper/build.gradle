@@ -1,0 +1,17 @@
+apply plugin:'application'
+  version= '1.0'
+ mainClassName='com.nt.basics.Arithmetic'
+ task  myTask(type: Wrapper)
+
+//cmd> gradle run
+// deactivate  gradle from u r computer by removing   gradle bin directory from 
+//PATH env.. variable 
+//cmd> gradlew   run
+//note::   we can send this application folder having  gradlew file to another computers
+// using git or svn  and they can run the GradleApp with out installing gradle in their 
+//computer by just using gradlew
+//To use different   version of gradle with gradlew 
+cmd>>gradlew   wrapper  --gradle-version  6.2.1
+
+
+ 

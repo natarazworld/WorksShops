@@ -1,0 +1,16 @@
+apply plugin:'application'
+  version= '1.0'
+ mainClassName='com.nt.basics.Arithmetic'
+
+ // to add entries to manifest file..
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.nt.basics.Arithmetic'
+    }
+}
+
+//cmd> gradle run
+//cmd> gradle    jar   run
+//cmd> java  -jar  build/libs/App4-applicaiton-1.0.jar 
+
+ 

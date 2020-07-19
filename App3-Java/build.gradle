@@ -1,0 +1,19 @@
+apply plugin:'java'
+  version= '1.0'
+ 
+ // to add entries to manifest file..
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.nt.basics.Arithmetic'
+    }
+}
+
+
+ //cmd> gradle task  --all
+ //cmd> gradle build
+ //cmd> java -cp build/libs/App3-Java.jar  com.nt.basics.Arithmetic   (Executing the class by keeping jar file in classpath)
+ //>gradle  clean 
+//> modify source code
+//> gradle  clean  build
+//>java  -cp build/libs/App3-Java.jar  com.nt.basics.Arithmetic
+//>java -jar build/libs/App3-Java-1.0.jar     (Excuting the jar file)
