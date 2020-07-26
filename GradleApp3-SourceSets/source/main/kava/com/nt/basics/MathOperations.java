@@ -1,7 +1,6 @@
 package com.nt.basics;
 
-import org.joda.time.LocalDateTime;
-import com.nt.basics.WishMessageGenerator;
+import java.util.Scanner;
 
 public class MathOperations {
 	
@@ -11,14 +10,16 @@ public class MathOperations {
 	
 	public static void main(String[] args) {
 		MathOperations operations=null;
+		Scanner sc=null;
+		
 		operations=new MathOperations();
 		System.out.println("result is "+operations.sum(1000, 2000));
+		//read inputs
+		sc=new Scanner(System.in);
+		System.out.println("Enter mame::");
+		String name=sc.next();
+		System.out.println("name::"+name);
 		
-		LocalDateTime date=new org.joda.time.LocalDateTime();
-		System.out.println(date);
-		
-		WishMessageGenerator generator=new WishMessageGenerator();
-		System.out.println(generator.sayHello("Raja"));
 		
 		
 	}
