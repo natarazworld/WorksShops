@@ -1,7 +1,6 @@
 package com.nt.basics;
 
 import org.joda.time.LocalDateTime;
-import com.nt.basics.WishMessageGenerator;
 
 public class MathOperations {
 	
@@ -16,10 +15,6 @@ public class MathOperations {
 		
 		LocalDateTime date=new org.joda.time.LocalDateTime();
 		System.out.println(date);
-		
-		WishMessageGenerator generator=new WishMessageGenerator();
-		System.out.println(generator.sayHello("Raja"));
-		
 		
 	}
 

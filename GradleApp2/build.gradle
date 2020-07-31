@@ -9,59 +9,19 @@
 plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java'
-     id 'java-library'
      id 'application'
 }
 
 repositories {
-    //mavenCentral()   // for maven central repositories
-    jcenter()  //for maven central repositories
+    mavenCentral()
     maven{
        url "https://maven.repository.redhat.com/ga/"
     }
-    mavenLocal()
-    google()
 }
-
- ext{
-    spver="5.2.7.RELEASE";
- }
 
 dependencies {
    // https://mvnrepository.com/artifact/junit/junit
 testImplementation group: 'junit', name: 'junit', version: '4.13'
-
-// https://mvnrepository.com/artifact/org.springframework/spring-context-support
-//implementation group: 'org.springframework', name: 'spring-context-support', version: "$spver"
-
- api ('org.springframework:spring-context-support:5.2.8.RELEASE'){
-     exclude group: 'org.springframework', module: 'spring-jcl'
-  }
-  
-  implementation  ('org.springframework:spring-expression'){
-     version {
-            strictly '5.2.5.RELEASE'
-        }
-  }
-
-// https://mvnrepository.com/artifact/org.springframework/spring-jdbc
-//implementation group: 'org.springframework', name: 'spring-jdbc', version: "$spver"
-
-// https://mvnrepository.com/artifact/org.springframework/spring-web
-//implementation group: 'org.springframework', name: 'spring-web', version: "$spver"
-
-
-
-
- //from maven local
-implementation group: 'commons-pool', name: 'commons-pool', version: '1.6'
-//from google
-implementation group: 'android.arch.paging', name: 'common', version: '1.0.1'
- 
- //from local file system
- implementation files("F:\\CPATHDemo\\wishapi.jar")
-
-
 
 // https://mvnrepository.com/artifact/joda-time/joda-time
 implementation group: 'joda-time', name: 'joda-time', version: '2.9.7.redhat-1'

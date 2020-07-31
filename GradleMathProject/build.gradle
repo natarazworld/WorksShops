@@ -1,0 +1,40 @@
+allprojects{
+ apply  plugin: 'java'
+ repositories{
+     mavenCentral()
+  } 
+}
+
+dependencies{
+   implementation project(':ArthProj1')
+    implementation project(':LogicalProj2')
+}
+
+project (':ArthProj1'){
+   dependencies{
+      // https://mvnrepository.com/artifact/com.oracle.ojdbc/ojdbc8
+    implementation group: 'com.oracle.ojdbc', name: 'ojdbc8', version: '19.3.0.0'
+      
+   }
+}
+
+project (':LogicalProj2'){
+   dependencies{
+       // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+         // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.21'
+
+   }
+}
+
+
+task task1( type: JavaExec) {
+    main = 'com.nt.main.MainApplication'
+    classpath =sourceSets.main.runtimeClasspath
+       }
+       
+ defaultTasks 'task1' 
+
+
+
+
